@@ -1,0 +1,7 @@
+# S5S (SOCKS5 SERVER)
+# By WINGS-IO
+
+port: 1080  # TCP
+auth: true  # username & password auth or open server
+user: 'admin'  # only if auth is true
+pass: 'admin'  # only if auth is true

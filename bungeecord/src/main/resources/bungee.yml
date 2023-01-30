@@ -1,0 +1,5 @@
+name: S5S
+author: WINGS-IO
+version: '${project.version}'
+main: io.wings.s5s.Main
+description: SOCKS5 Server plugin
