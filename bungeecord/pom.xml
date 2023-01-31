@@ -4,15 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>WINGS-IO</groupId>
-    <artifactId>S5S-bungeecord</artifactId>
-    <version>${project.parent.version}</version>
+    <parent>
+        <groupId>WINGS-IO</groupId>
+        <artifactId>S5S</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>bungeecord</artifactId>
     <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jar.finalName>${project.name}-bungeecord</jar.finalName>
+        <jar.finalName>${project.parent.artifactId}-${artifactId}</jar.finalName>
     </properties>
 
     <build>
@@ -24,6 +28,18 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <outputDirectory>${project.basedir}/../target</outputDirectory>
+                    <archive>
+                        <manifestEntries>
+                            <Built-By>${project.parent.groupId}</Built-By>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

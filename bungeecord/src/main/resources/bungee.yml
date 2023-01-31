@@ -1,5 +1,5 @@
-name: S5S
-author: WINGS-IO
+name: '${project.parent.artifactId}-${project.artifactId}'
+author: ${project.parent.groupId}
 version: '${project.version}'
 main: io.wings.s5s.Main
 description: SOCKS5 Server plugin

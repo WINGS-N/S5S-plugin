@@ -6,14 +6,17 @@
 
     <groupId>WINGS-IO</groupId>
     <artifactId>S5S</artifactId>
-    <version>1.0</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
+
+    <properties>
+        <revision>1.0</revision>
+    </properties>
 
     <name>S5S</name>
     <description>SOCKS5 Server plugin</description>
 
     <modules>
-        <module>velocity</module>
         <module>bungeecord</module>
     </modules>
 </project>
